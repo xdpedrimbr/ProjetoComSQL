@@ -15,7 +15,6 @@ class userController{
 
         const checkEmailDB = await Knex('usuarios').where('email', email)
         const checkEmail = checkEmailDB[0]
-        console.log(checkEmail)
         if(checkEmail){
             return response.json({ createdUser:false, erro:'email ja cadastrado' })
         }

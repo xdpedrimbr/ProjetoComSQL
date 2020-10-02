@@ -5,11 +5,10 @@ try {
       development: {
          client: "mysql",
          connection: {
-            // filename: './src/database/gafioDB.sql',
             database: "desafio3",
             host: "localhost",
             user: "root",
-            password: "P24h08g00",
+            password: "P24h08g00"
          },
          migrations: {
             directory: path.resolve(__dirname, "src", "database", "migrations"),

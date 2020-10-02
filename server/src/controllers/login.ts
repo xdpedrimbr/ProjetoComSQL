@@ -4,11 +4,7 @@ import Knex from '../connection'
 class loginController{
     async create (request: Request, response: Response){
         //cria usuarios
-        const {password, email} = request.body
-
-        console.log(password)
-        console.log(email);
-        
+        const {password, email} = request.body     
 
         await Knex('usuarios').where('email', email).then(response1 => {
             if(!response1[0]){
